@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="facebook-domain-verification" content="w6el6idfrmlpl7u5nzqozna8i2mi2w" />
+    <title>ZenStone LLC - Digital Business Acquisition & Growth</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f3d2e;
+            --primary-light: #1a5540;
+            --secondary: #d4a574;
+            --accent: #2d6149;
+            --text-dark: #1a1a1a;
+            --text-medium: #4a4a4a;
+            --text-light: #6b6b6b;
+            --bg-cream: #fdfbf7;
+            --bg-light: #f8f6f1;
+            --white: #ffffff;
+            --gold: #c9a55c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            background: var(--bg-cream);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(212, 165, 116, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+            opacity: 0.3;
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 0.5px;
+            position: relative;
+            text-decoration: none;
+        }
+
+        .logo::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background: var(--secondary);
+            transition: width 0.3s ease;
+        }
+
+        .logo:hover::after {
+            width: 100%;
+        }
+
+        .logo span {
+            color: var(--secondary);
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-medium);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f8f6f1 0%, #fdfbf7 50%, #ffffff 100%);
+            color: var(--text-dark);
+            padding: 10rem 5% 8rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(212, 165, 116, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(15, 61, 46, 0.04) 0%, transparent 50%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(15,61,46,0.03)" stroke-width="0.5"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-20px) scale(1.05); }
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            animation: fadeInUp 1s ease-out;
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            color: var(--primary);
+        }
+
+        .hero h1 br {
+            display: block;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 650px;
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease-out 0.2s backwards;
+            line-height: 1.8;
+            letter-spacing: 0.01em;
+            color: var(--text-medium);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: fadeInUp 1s ease-out 0.4s backwards;
+            letter-spacing: 0.5px;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(15, 61, 46, 0.25);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(15, 61, 46, 0.35);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 7rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        section:nth-child(even) {
+            background: var(--white);
+        }
+
+        h2 {
+            font-size: 3.2rem;
+            margin-bottom: 1.2rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            letter-spacing: -0.02em;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--secondary), var(--gold));
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            margin-bottom: 4rem;
+            max-width: 700px;
+            margin-top: 2rem;
+            line-height: 1.7;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 5rem;
+            align-items: start;
+            margin-top: 3rem;
+        }
+
+        .about-text h3 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+            letter-spacing: -0.01em;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-medium);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--white) 0%, var(--bg-light) 100%);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border: 1px solid rgba(212, 165, 116, 0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--secondary), var(--gold));
+        }
+
+        .stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(212, 165, 116, 0.15);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            font-family: 'Cormorant Garamond', serif;
+            letter-spacing: -0.02em;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-top: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 3rem 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.06);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(212, 165, 116, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary), var(--gold));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+            border-color: var(--secondary);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 20px rgba(15, 61, 46, 0.3);
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 12px 30px rgba(15, 61, 46, 0.4);
+        }
+
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+            color: var(--primary);
+            letter-spacing: -0.01em;
+        }
+
+        .service-card p {
+            color: var(--text-medium);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--bg-light);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 5rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            background: var(--white);
+            padding: 3.5rem;
+            border-radius: 24px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            border: 1px solid rgba(212, 165, 116, 0.2);
+        }
+
+        .contact-item {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .contact-item h4 {
+            color: var(--accent);
+            margin-bottom: 0.8rem;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .contact-item p {
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+
+        .contact-item a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .contact-item a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: width 0.3s ease;
+        }
+
+        .contact-item a:hover::after {
+            width: 100%;
+        }
+
+        .about-text .highlight-box {
+            margin-top: 2.5rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--white) 0%, var(--bg-cream) 100%);
+            border-left: 4px solid var(--secondary);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .about-text .highlight-box strong {
+            color: var(--primary);
+            font-size: 1.05rem;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary) 0%, #0a2f23 100%);
+            color: var(--white);
+            padding: 3.5rem 5%;
+            text-align: center;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+        }
+
+        footer p {
+            opacity: 0.85;
+            font-weight: 300;
+            letter-spacing: 0.3px;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 968px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            nav ul {
+                gap: 2rem;
+            }
+
+            section {
+                padding: 5rem 5%;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero {
+                padding: 7rem 5% 6rem;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+            
+            section {
+                scroll-margin-top: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">Zen<span>Stone</span></a>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Seeking Digital Businesses<br>to Acquire & Grow</h1>
+            <p>We actively purchase established online businesses and scale them through strategic management and operational excellence. Ready to sell? Let's talk.</p>
+            <a href="#contact" class="cta-button">Sell Your Business</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About ZenStone</h2>
+                <p class="section-subtitle">Actively seeking to acquire and grow digital businesses</p>
+                
+                <h3>Our Mission</h3>
+                <p>ZenStone LLC is actively seeking to acquire established digital businesses and scale them through strategic management and operational improvements.</p>
+                
+                <p>We are looking for promising e-commerce companies, online platforms, and digital business models with growth potential. We offer fair valuations, smooth transaction processes, and a commitment to continuing and expanding your business legacy.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <p class="section-subtitle">Comprehensive services from acquisition to sustainable growth</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Business Acquisition</h3>
+                <p>We are actively seeking profitable digital businesses with proven revenue and growth potential. If you're looking to sell your e-commerce store, SaaS product, or online platform, we offer fair valuations, smooth transactions, and confidential negotiations.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Growth Management</h3>
+                <p>Strategic development of acquired businesses through revenue optimization, market expansion, and new sales channel development. We implement data-driven growth strategies.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Operational Optimization</h3>
+                <p>Improvement of business processes, cost optimization, and efficiency enhancement. We modernize systems, automate workflows, and increase profitability.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Digital Transformation</h3>
+                <p>Digitization and modernization of traditional business models. Integration of modern e-commerce platforms, marketing automation, and digital sales channels.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>E-Commerce Expansion</h3>
+                <p>Professional expansion and management of online sales channels on platforms like Amazon, eBay, Shopify, and other marketplaces to maximize revenue.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Business Turnaround</h3>
+                <p>Restructuring and repositioning of undervalued or stagnating businesses. Development and implementation of recovery strategies to restore profitability.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Ready to Sell?</h2>
+        <p class="section-subtitle">Contact us to discuss selling your digital business - all inquiries are confidential</p>
+        
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h4>📧 Email</h4>
+                    <p><a href="mailto:hello.zenstone@gmail.com">hello.zenstone@gmail.com</a></p>
+                </div>
+
+                <div class="contact-item">
+                    <h4>📞 Phone</h4>
+                    <p><a href="tel:+13072284024">+1 (307) 228-4024</a></p>
+                </div>
+
+                <div class="contact-item">
+                    <h4>📍 Address</h4>
+                    <p>ZenStone LLC<br>
+                    30 N Gould St<br>
+                    Ste R<br>
+                    Sheridan, WY, 82801, USA</p>
+                </div>
+
+                <div class="contact-item">
+                    <h4>🕐 Business Hours</h4>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                    Saturday - Sunday: By Appointment</p>
+                </div>
+
+                <div class="contact-item">
+                    <h4>💼 Business Structure</h4>
+                    <p>Limited Liability Company (LLC)<br>
+                    Registered in the United States</p>
+                </div>
+            </div>
+
+            <div class="about-text">
+                <h3>Sell Your Digital Business</h3>
+                <p>Are you looking to sell your e-commerce business, online platform, or digital company? ZenStone LLC is actively seeking acquisition opportunities and offers fair valuations, professional execution, and a seamless transition process.</p>
+                
+                <p>We have the expertise and resources to continue growing your business and manage it profitably long-term. Your legacy matters to us. Contact us for a confidential consultation to discuss your business sale.</p>
+
+                <div class="highlight-box">
+                    <strong>What We're Looking For:</strong> Established digital businesses with proven revenue, e-commerce stores on platforms like Amazon/eBay/Shopify, online service businesses, SaaS products, or profitable digital brands. We welcome inquiries from business owners ready to exit or seeking the right partner for growth.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 ZenStone LLC · Sheridan, WY, USA · <a href="mailto:hello.zenstone@gmail.com" style="color:var(--secondary);text-decoration:none;">hello.zenstone@gmail.com</a></p>
+        <p style="margin-top:0.75rem;font-size:0.9rem;opacity:0.6;">
+            <a href="/privacy" style="color:var(--secondary);text-decoration:none;">Privacy Policy</a>
+        </p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy – ZenStone LLC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f3d2e;
+            --primary-light: #1a5540;
+            --secondary: #d4a574;
+            --accent: #2d6149;
+            --text-dark: #1a1a1a;
+            --text-medium: #4a4a4a;
+            --text-light: #6b6b6b;
+            --bg-cream: #fdfbf7;
+            --bg-light: #f8f6f1;
+            --white: #ffffff;
+            --gold: #c9a55c;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            background: var(--bg-cream);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        header {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(212,165,116,0.15);
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+            opacity: 0.3;
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo span { color: var(--secondary); }
+
+        nav a.back-link {
+            text-decoration: none;
+            color: var(--text-medium);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a.back-link:hover { color: var(--primary); }
+
+        .hero-small {
+            background: linear-gradient(135deg, #f8f6f1 0%, #fdfbf7 100%);
+            padding: 6rem 5% 4rem;
+            position: relative;
+        }
+
+        .hero-small h1 {
+            font-size: 3.5rem;
+            color: var(--primary);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .hero-small p {
+            max-width: 1400px;
+            margin: 1rem auto 0;
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        .content {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 4rem 5% 6rem;
+        }
+
+        .content h2 {
+            font-size: 1.9rem;
+            color: var(--primary);
+            margin: 3rem 0 1rem;
+            display: block;
+        }
+
+        .content h2::after { display: none; }
+
+        .content h2:first-child { margin-top: 0; }
+
+        .content p {
+            color: var(--text-medium);
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            line-height: 1.85;
+        }
+
+        .content ul {
+            margin: 0.5rem 0 1.2rem 1.5rem;
+            color: var(--text-medium);
+        }
+
+        .content ul li {
+            margin-bottom: 0.5rem;
+            line-height: 1.7;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, var(--white) 0%, var(--bg-light) 100%);
+            border-left: 4px solid var(--secondary);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+        }
+
+        .info-box p { margin-bottom: 0; }
+
+        .divider {
+            border: none;
+            border-top: 1px solid rgba(212,165,116,0.2);
+            margin: 2.5rem 0;
+        }
+
+        footer {
+            background: linear-gradient(135deg, var(--primary) 0%, #0a2f23 100%);
+            color: var(--white);
+            padding: 3.5rem 5%;
+            text-align: center;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+        }
+
+        footer p {
+            opacity: 0.85;
+            font-weight: 300;
+            letter-spacing: 0.3px;
+        }
+
+        @media (max-width: 640px) {
+            .hero-small h1 { font-size: 2.2rem; }
+            .content { padding: 3rem 5% 5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="/" class="logo">Zen<span>Stone</span></a>
+            <a href="/" class="back-link">← Back to Home</a>
+        </nav>
+    </header>
+
+    <div class="hero-small">
+        <h1>Privacy Policy</h1>
+        <p>Last updated: July 30, 2026</p>
+    </div>
+
+    <div class="content">
+
+        <div class="info-box">
+            <p>This Privacy Policy applies to all mobile applications published by <strong>ZenStone LLC</strong>, including <strong>Calm Stoic Journal</strong>, <strong>KnowUs: Who Knows Who</strong>, <strong>Hairstyle AI</strong>, and any future apps. We are committed to protecting your privacy.</p>
+        </div>
+
+        <h2>1. Who We Are</h2>
+        <p>ZenStone LLC is a limited liability company registered in the United States (30 N Gould St, Ste R, Sheridan, WY 82801). We develop and publish mobile apps under the ZenStone LLC brand.</p>
+        <p>Contact: <a href="mailto:privacy@zenstonellc.com" style="color:var(--secondary);">privacy@zenstonellc.com</a></p>
+
+        <hr class="divider">
+
+        <h2>2. Data We Collect</h2>
+
+        <p><strong>Calm Stoic Journal:</strong></p>
+        <ul>
+            <li><strong>Journal entries & settings</strong> — stored locally on your device only. We do not have access to your journal content.</li>
+            <li><strong>Streak & statistics</strong> — stored locally on your device only.</li>
+            <li><strong>Language & theme preferences</strong> — stored locally on your device only.</li>
+            <li><strong>Quotes</strong> — fetched anonymously from Firebase solely to deliver quote content.</li>
+            <li><strong>Purchase information</strong> — handled entirely by Google Play / Apple App Store Billing. We only receive confirmation of whether a purchase was made, not payment details.</li>
+            <li><strong>Notification permissions</strong> — only used to send daily reminders you set yourself. No data leaves your device.</li>
+            <li><strong>Marcus Aurelius AI Chat (Calm Stoic Journal only)</strong> — when you use the Marcus AI feature, the message you type is transmitted to our secure cloud function and forwarded to Anthropic's API for processing. Messages are <strong>not stored</strong> on our servers or by Anthropic after processing. Only your monthly usage count (quota) is stored locally on your device. The cloud function runs on Google Cloud (europe-west1, EU region). See Section 5 for Anthropic's privacy policy.</li>
+        </ul>
+
+        <p><strong>KnowUs: Who Knows Who:</strong></p>
+        <ul>
+            <li><strong>Player names</strong> — entered voluntarily for the online multiplayer mode. Stored temporarily in Firebase during an active game session and deleted automatically when the session ends.</li>
+            <li><strong>Game room data</strong> — temporary session data (room code, answers, scores) stored in Firebase during active play only.</li>
+            <li><strong>Promo code redemption</strong> — a randomly generated anonymous device ID is stored in Firebase to prevent duplicate code redemptions. No personal information is linked to this ID.</li>
+            <li><strong>Language & theme preferences</strong> — stored locally on your device only.</li>
+            <li><strong>Purchase information</strong> — handled entirely by Google Play / Apple App Store Billing. We only receive confirmation of whether a purchase was made, not payment details.</li>
+        </ul>
+
+        <p><strong>Hairstyle AI:</strong></p>
+        <ul>
+            <li><strong>Your photo</strong> — the photo you choose is transmitted to our secure cloud function and forwarded to Google's Gemini API, which generates the image showing you with the new hairstyle. The photo is processed only to create that image. It is <strong>not stored</strong> on our servers, not retained by Google after processing, and not used to train any AI model. The cloud function runs on Google Cloud (us-central1, United States). See Section 5 for Google's privacy policy.</li>
+            <li><strong>Your photo and the generated images</strong> — kept <strong>only on your device</strong> (local browser storage). We have no access to them. Deleting an image in the app or uninstalling the app removes it permanently.</li>
+            <li><strong>Facial images</strong> — the photo necessarily shows your face, because that is what the app changes. We do <strong>not</strong> perform face recognition, we do not create a biometric template, and we do not use the photo to identify you. It is analysed only to suggest hairstyles that suit your face shape and hair texture, and that analysis is discarded once the suggestion is made.</li>
+            <li><strong>First name & style preference</strong> — entered voluntarily and stored locally on your device only, used to personalise the app's wording and suggestions.</li>
+            <li><strong>Credit balance</strong> — stored locally on your device only.</li>
+            <li><strong>Feedback</strong> — if you rate a result (thumbs up/down), we store your rating, the reasons you select, any text you type, the name of the hairstyle and your selected style preference in Firebase. <strong>No photo is included.</strong> This is used solely to improve the app.</li>
+            <li><strong>Purchase information</strong> — handled entirely by Google Play / Apple App Store Billing. We only receive confirmation of whether a purchase was made, not payment details.</li>
+        </ul>
+
+        <hr class="divider">
+
+        <h2>3. Health & Fitness Data</h2>
+        <p>Regarding health and fitness data across all our apps:</p>
+        <ul>
+            <li>We do <strong>not</strong> directly collect, access, or process any health or fitness data from your device or any health APIs.</li>
+            <li><strong>Calm Stoic Journal:</strong> Our third-party analytics and advertising SDKs (Firebase, Meta, TikTok) may collect certain device and behavioral data as part of their standard operation. Please refer to their privacy policies in Section 5.</li>
+            <li><strong>KnowUs: Who Knows Who:</strong> Only Firebase is used for multiplayer functionality. No advertising or tracking SDKs are used in this app.</li>
+            <li><strong>Hairstyle AI:</strong> Only Firebase is used, for image generation and feedback. No advertising or tracking SDKs are used in this app.</li>
+            <li>We do not share any health or fitness data with advertisers or other third parties beyond what is disclosed in Section 5.</li>
+        </ul>
+
+        <hr class="divider">
+
+        <h2>4. Data We Do Not Collect</h2>
+        <ul>
+            <li>We do not collect your address or any personal identification information through our apps. Hairstyle AI lets you enter a first name, but it never leaves your device.</li>
+            <li>We do not track your location.</li>
+            <li>We do not sell your personal data.</li>
+            <li>We do not use advertising networks for in-app ads. <strong>KnowUs: Who Knows Who</strong> and <strong>Hairstyle AI</strong> do not use any advertising or tracking SDKs. Calm Stoic Journal uses Meta and TikTok SDKs solely to measure the effectiveness of our own marketing campaigns.</li>
+        </ul>
+
+        <hr class="divider">
+
+        <h2>5. Third-Party Services</h2>
+        <p>Our apps use the following third-party services:</p>
+        <ul>
+            <li><strong>Google Firebase</strong> — used for online multiplayer sessions, promo code validation, quote delivery, and anonymous analytics. Firebase may collect technical information according to <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--secondary);">Google's Privacy Policy</a>.</li>
+            <li><strong>Google Play Billing / Apple App Store</strong> — used to process in-app purchases. Governed by <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--secondary);">Google's Privacy Policy</a> and <a href="https://www.apple.com/legal/privacy/" target="_blank" style="color:var(--secondary);">Apple's Privacy Policy</a>.</li>
+            <li><strong>Meta (Facebook) SDK</strong> — used in <strong>Calm Stoic Journal only</strong> to measure the effectiveness of our advertising campaigns. May collect device identifiers and app usage data according to <a href="https://www.facebook.com/privacy/policy/" target="_blank" style="color:var(--secondary);">Meta's Privacy Policy</a>.</li>
+            <li><strong>TikTok SDK</strong> — used in <strong>Calm Stoic Journal only</strong> to measure the effectiveness of our TikTok advertising campaigns. May collect device identifiers and app usage data according to <a href="https://www.tiktok.com/legal/page/us/privacy-policy/en" target="_blank" style="color:var(--secondary);">TikTok's Privacy Policy</a>.</li>
+            <li><strong>Google Gemini API</strong> — used exclusively in <strong>Hairstyle AI</strong> to generate hairstyle images and to analyse a photo for matching suggestions. Your photo is transmitted in real-time and is not retained after processing. Google does not use data submitted through the paid Gemini API to train its models. See <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--secondary);">Google's Privacy Policy</a> and the <a href="https://ai.google.dev/gemini-api/terms" target="_blank" style="color:var(--secondary);">Gemini API Terms</a>.</li>
+            <li><strong>Anthropic</strong> — used exclusively for the Marcus Aurelius AI Chat feature in Calm Stoic Journal. Your message is transmitted to Anthropic's API in real-time and is not retained after processing. Anthropic does not use API data to train its models. See <a href="https://www.anthropic.com/privacy" target="_blank" style="color:var(--secondary);">Anthropic's Privacy Policy</a>.</li>
+        </ul>
+
+        <hr class="divider">
+
+        <h2>6. Data Storage & Security</h2>
+        <p>Personal preferences and app data are stored locally on your device and are not transmitted to our servers. Online multiplayer session data is stored temporarily in Firebase and deleted automatically after the session ends.</p>
+        <p>Certain technical and usage data may be collected and transmitted by third-party services (Firebase, and for Calm Stoic Journal also Meta and TikTok) for analytics and advertising purposes. Please refer to their respective privacy policies in Section 5.</p>
+        <p><strong>Hairstyle AI:</strong> your photo and the generated images are stored only in your device's local browser storage. They are never uploaded to our servers for storage — a photo is transmitted solely for the moment of generation and discarded afterwards.</p>
+        <p>If you uninstall an app, all locally stored data will be deleted from your device.</p>
+
+        <hr class="divider">
+
+        <h2>7. Children's Privacy</h2>
+        <p>Our apps are designed for general audiences. KnowUs: Who Knows Who includes a family mode suitable for all ages. We do not knowingly collect personal information from children under 13. Online multiplayer features require player names which are entered voluntarily and stored only for the duration of the game session. If you believe a child has provided personal information, please contact us at <a href="mailto:privacy@zenstonellc.com" style="color:var(--secondary);">privacy@zenstonellc.com</a>.</p>
+
+        <hr class="divider">
+
+        <h2>8. Your Rights</h2>
+        <p>Since most of your data is stored locally on your device, you have full control over it at all times:</p>
+        <ul>
+            <li>You can delete your data at any time by clearing the app's data in your device settings or by uninstalling the app.</li>
+            <li>For Firebase-stored session data (KnowUs online mode), data is automatically deleted after the game session ends.</li>
+            <li>If you have contacted us by email, you can request deletion of your email and message by contacting <a href="mailto:privacy@zenstonellc.com" style="color:var(--secondary);">privacy@zenstonellc.com</a>.</li>
+        </ul>
+        <p>If you are located in the EU/EEA, you have rights under GDPR including the right to access, rectify, and erase your personal data.</p>
+
+        <hr class="divider">
+
+        <h2>9. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated date. We encourage you to review this page periodically.</p>
+
+        <hr class="divider">
+
+        <h2>10. Contact</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us:</p>
+        <div class="info-box">
+            <p><strong>ZenStone LLC</strong><br>
+            30 N Gould St, Ste R, Sheridan, WY 82801, USA<br>
+            Email: <a href="mailto:privacy@zenstonellc.com" style="color:var(--secondary);">privacy@zenstonellc.com</a></p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 ZenStone LLC · Sheridan, WY, USA</p>
+        <p style="margin-top:0.75rem;font-size:0.9rem;opacity:0.6;">
+            <a href="/" style="color:var(--secondary);text-decoration:none;">← Back to Home</a>
+        </p>
+    </footer>
+
+</body>
+</html>

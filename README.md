@@ -1,7 +1,7 @@
 # zenstonellc.com
 
-Website und Datenschutzerklärung für die Apps von ZenStone LLC
-(Calm Stoic Journal, KnowUs: Who Knows Who, Hairstyle AI).
+Website, Datenschutzerklärung und Support-Seiten für die Apps von ZenStone LLC
+(Calm Stoic Journal, KnowUs: Who Knows Who, Hairfit).
 
 **Live: https://zenstonellc.com** — gehostet über GitHub Pages aus diesem Repo.
 Push auf `main` geht nach etwa einer Minute live.
@@ -12,13 +12,51 @@ Push auf `main` geht nach etwa einer Minute live.
 |---|---|
 | `index.html` | Startseite |
 | `privacy.html` | Datenschutzerklärung, erreichbar unter `/privacy` |
+| `build-support.js` | **Erzeugt die vier Support-Seiten.** Hier wird bearbeitet, nicht im HTML |
+| `hairfit-support.html` | erzeugt → `/hairfit-support` |
+| `calmstoic-support.html` | erzeugt → `/calmstoic-support` |
+| `knowus-support.html` | erzeugt → `/knowus-support` |
+| `support.html` | erzeugt → `/support`, nur eine Übersicht mit Links |
 | `CNAME` | Custom Domain. **Nicht löschen** — ohne sie antwortet Pages auf der Domain mit 404 |
 | `google…html`, `tiktok…txt` | Domain-Verifizierung für Google und TikTok. **Nicht löschen** |
+
+## Support-Seiten (in den Store-Einträgen hinterlegt)
+
+Diese URLs stehen bei Apple und Google als **Support-URL** der jeweiligen App.
+Ändert sich hier ein Dateiname, müssen die Store-Einträge nachgezogen werden:
+
+| App | Support-URL |
+|---|---|
+| Hairfit | `https://zenstonellc.com/hairfit-support` |
+| Calm Stoic Journal | `https://zenstonellc.com/calmstoic-support` |
+| KnowUs: Who Knows Who | `https://zenstonellc.com/knowus-support` |
+
+**Jede App hat bewusst eine eigene Seite.** Die erste Fassung war eine Sammelseite mit
+Sprungmarken (`/support#hairfit`) — dort sah ein Store-Prüfer für Hairfit auch CalmStoic
+und KnowUs. Diese Anker gibt es nicht mehr.
+
+### Ändern — nur über den Generator
+
+Die vier HTML-Dateien sind **erzeugt**. Wer sie direkt bearbeitet, verliert die Änderung
+beim nächsten Lauf:
+
+```
+node build-support.js
+```
+
+Grund für den Generator: Die Hälfte jeder Seite ist identisch (Käufe, Kündigen,
+Planwechsel, Erstattung, Daten, Kontakt), und genau diese Abschnitte ändern sich am
+häufigsten. Drei handgepflegte Kopien liefen binnen Monaten auseinander — und eine
+veraltete Kündigungsanleitung fällt erst auf, wenn sich jemand beschwert.
+
+Die erzeugten Dateien werden trotzdem **mit eingecheckt**: GitHub Pages liefert sie direkt
+aus, es gibt keinen Build-Schritt beim Ausrollen. Also nach jeder Änderung erst
+`node build-support.js`, dann committen.
 
 ## Ändern
 
 Datei bearbeiten, committen, pushen. Fertig. Die Links nutzen saubere URLs
-(`/`, `/privacy`), das löst GitHub Pages automatisch auf.
+(`/`, `/privacy`, `/hairfit-support`), das löst GitHub Pages automatisch auf.
 
 Die Datenschutzerklärung ist die Quelle für **alle** Apps — sie ist in den
 Store-Einträgen hinterlegt. Kommt eine App dazu, gehört sie in Abschnitt 2

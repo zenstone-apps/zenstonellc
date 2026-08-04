@@ -63,6 +63,21 @@ Store-Einträgen hinterlegt. Kommt eine App dazu, gehört sie in Abschnitt 2
 (welche Daten), Abschnitt 3 (SDKs), Abschnitt 4 (was wir nicht sammeln) und
 Abschnitt 5 (Drittanbieter).
 
+## E-Mail-Adressen
+
+Beide Adressen, die auf den Support- und Datenschutzseiten stehen, empfangen wirklich Post
+(am 04.08.2026 geprüft — die Frage kam auf, weil zwei verschiedene Adressen im Umlauf sind):
+
+| Adresse | Wofür | Wie sie funktioniert |
+|---|---|---|
+| `hello.zenstone@gmail.com` | Support, steht auf der Startseite und allen Support-Seiten | echtes Gmail-Postfach |
+| `privacy@zenstonellc.com` | Datenschutz, steht in der Datenschutzerklärung | Weiterleitung über **ImprovMX** |
+
+Die MX- und SPF-Records für ImprovMX liegen in der **Netlify-DNS-Zone** — siehe die Warnung
+weiter unten. Wird die Zone gelöscht, ist `privacy@zenstonellc.com` still weg, ohne dass
+irgendwo eine Fehlermeldung auftaucht. Ein Store-Prüfer, der dort schreibt, bekäme keine
+Antwort.
+
 ## Hosting-Historie
 
 Vorher lief die Seite auf **Netlify**. Am 30.07.2026 sperrte Netlify alle Deploys

@@ -251,7 +251,9 @@
             <li><strong>Settings</strong> (music, sound effects, vibration) — stored locally on your device only.</li>
             <li><strong>Purchase information</strong> — the one-time purchase "Full Game" is handled entirely by Google Play / Apple App Store Billing. We only receive confirmation of whether a purchase was made, not payment details.</li>
             <li><strong>Ratings</strong> — after your first complete life, the app may ask your device once to show the App Store / Google Play rating dialog. Any rating you give goes directly to Apple or Google.</li>
-            <li>No account, no analytics, no advertising and no tracking. The app makes no network requests of its own and works offline.</li>
+            <li><strong>Anonymous statistics (Firebase Analytics)</strong> — to learn how far lives get and which games are played, the app sends a small set of events to Google Firebase Analytics: a life started or ended (with the in-game age of the character and the number of lives played), a game started or finished (which game), the purchase screen shown and whether a purchase or restore went through, and the rating prompt. Firebase adds an app instance ID, basic device and app information (model, OS version, app version, language) and a coarse, city-level location derived from the IP address. <strong>No names, nothing you choose or type in a life, no advertising ID</strong> (on iOS the version of Firebase without IDFA is used; on Android advertising ID collection is disabled), no ad personalization and no tracking across apps or websites.</li>
+            <li><strong>Your choice</strong> — in the EU/EEA, the UK and Switzerland, statistics are only sent after you allow them in the app. Everywhere else they are on by default. You can switch them off at any time in the menu under "Anonymous statistics".</li>
+            <li>No account and no advertising. Apart from these statistics and the purchase, the app makes no network requests and works offline.</li>
         </ul>
 
         <hr class="divider">
@@ -263,7 +265,7 @@
             <li><strong>Calm Stoic Journal:</strong> Our third-party analytics and advertising SDKs (Firebase, Meta, TikTok) may collect certain device and behavioral data as part of their standard operation. Please refer to their privacy policies in Section 5.</li>
             <li><strong>KnowUs: Who Knows Who:</strong> Only Firebase is used for multiplayer functionality. No advertising or tracking SDKs are used in this app.</li>
             <li><strong>Hairfit:</strong> Firebase is used for image generation, feedback and analytics, and RevenueCat to report completed purchases. Firebase Analytics uses your device's advertising ID to measure the performance of our own marketing campaigns. No advertising is shown inside the app.</li>
-            <li><strong>Seventy-Two – Life Simulator:</strong> No third-party SDKs for analytics, advertising or tracking are used. Purchases and ratings are handled by Apple and Google.</li>
+            <li><strong>Seventy-Two – Life Simulator:</strong> Firebase Analytics is used only for anonymous product statistics (see Section 2), without advertising ID and without ad personalization. No advertising or tracking SDKs are used. Purchases and ratings are handled by Apple and Google.</li>
             <li>We do not share any health or fitness data with advertisers or other third parties beyond what is disclosed in Section 5.</li>
         </ul>
 
@@ -298,7 +300,7 @@
         <p>Personal preferences and app data are stored locally on your device and are not transmitted to our servers. Online multiplayer session data is stored temporarily in Firebase and deleted automatically after the session ends.</p>
         <p>Certain technical and usage data may be collected and transmitted by third-party services (Firebase, and for Calm Stoic Journal also Meta and TikTok) for analytics and advertising purposes. Please refer to their respective privacy policies in Section 5.</p>
         <p><strong>Hairfit:</strong> your photo and the generated images are stored only in your device's local browser storage. Your photo is transmitted solely for the moment of generation and never stored on our servers. A newly generated image is held on our server for up to 48 hours so it can be delivered if your connection drops, and is then deleted automatically.</p>
-        <p><strong>Seventy-Two – Life Simulator:</strong> all game data stays in the app's local storage on your device and is never transmitted.</p>
+        <p><strong>Seventy-Two – Life Simulator:</strong> all game data (your lives, choices and scores) stays in the app's local storage on your device and is never transmitted. Only the anonymous statistics described in Section 2 are sent to Firebase, if allowed.</p>
         <p>If you uninstall an app, all locally stored data will be deleted from your device.</p>
 
         <hr class="divider">

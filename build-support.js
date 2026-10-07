@@ -21,6 +21,7 @@
  *   hairfit-support.html    ->  zenstonellc.com/hairfit-support
  *   calmstoic-support.html  ->  zenstonellc.com/calmstoic-support
  *   knowus-support.html     ->  zenstonellc.com/knowus-support
+ *   bmxsesh-support.html    ->  zenstonellc.com/bmxsesh-support
  *   support.html            ->  zenstonellc.com/support   (Uebersicht, verlinkt die drei)
  */
 
@@ -262,6 +263,50 @@ const APPS = [
         <h3>A player dropped out mid-game</h3>
         <p>Rejoining with the same room code puts them back in. If the host leaves, the room
         closes for everyone — start a new one.</p>`
+  },
+  {
+    datei: 'bmxsesh-support.html',
+    name: 'BMX Sesh',
+    voll: 'BMX Sesh: Freestyle Parks',
+    kurzName: 'BMX Sesh',
+    einleitung: `A freestyle BMX game: ride parks, link tricks, grinds and manuals into lines, and
+        hit big dirt jumps. West Park is free; one purchase unlocks all other parks.`,
+    datenKurz: `Scores, records, stickers, garage choices and settings are stored only on your
+        device. The game has no account, no ads and no analytics.`,
+    // Einmalkauf statt Abo: eigener Kauf-Abschnitt
+    kaeufe: `
+        <h2 id="purchases">Purchases</h2>
+
+        <h3>What does "Unlock all parks" include?</h3>
+        <p>A single one-time purchase that unlocks every park — Street, Arena, Dirt Hill and all
+        parks added in future updates. It is not a subscription and never renews.</p>
+
+        <h3>How do I restore my purchase?</h3>
+        <p>Open <em>Play</em>, tap any locked park and choose <em>Restore purchases</em>, signed
+        in with the same Apple ID or Google account you bought with. On a new device the unlock
+        also comes back automatically when the game starts.</p>
+
+        <h3>How do I get a refund?</h3>
+        <p>Refunds are handled entirely by the store. On Apple, use
+        <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>;
+        on Android, use the Play Store order history. If something went wrong on our side,
+        write to us first — we would rather fix it.</p>
+
+        <h3>I was charged but the parks are still locked</h3>
+        <p>Tap <em>Restore purchases</em> first. If that does not help, send us the receipt from
+        Apple or Google and we will sort it out.</p>`,
+    faq: `
+        <h3>How do I control the rider?</h3>
+        <p>Open <em>Controls</em> in the main menu: it explains the phone controls, keyboard and
+        game controller. With <em>Settings → Control hints</em> you can show the labels at the
+        thumbs permanently, for the first minutes, or never.</p>
+
+        <h3>Can I use a game controller?</h3>
+        <p>Yes. Xbox and other standard controllers work on iPhone and Android.</p>
+
+        <h3>My progress is gone</h3>
+        <p>Progress lives on your device only. Deleting the app deletes it. A purchased unlock
+        is never lost — use <em>Restore purchases</em>.</p>`
   }
 ];
 
@@ -324,7 +369,7 @@ for (const app of APPS) {
     `        <p>${app.einleitung}</p>`,
     app.faq,
     `\n        <hr class="divider">\n`,
-    kaeufeAbschnitt(app.kurzName),
+    app.kaeufe || kaeufeAbschnitt(app.kurzName),
     `\n        <hr class="divider">\n`,
     datenAbschnitt(app.datenKurz),
     `\n        <hr class="divider">\n`,

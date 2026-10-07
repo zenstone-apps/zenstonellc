@@ -16,6 +16,7 @@ Push auf `main` geht nach etwa einer Minute live.
 | `hairfit-support.html` | erzeugt → `/hairfit-support` |
 | `calmstoic-support.html` | erzeugt → `/calmstoic-support` |
 | `knowus-support.html` | erzeugt → `/knowus-support` |
+| `bmxsesh-support.html` | erzeugt → `/bmxsesh-support` |
 | `support.html` | erzeugt → `/support`, nur eine Übersicht mit Links |
 | `CNAME` | Custom Domain. **Nicht löschen** — ohne sie antwortet Pages auf der Domain mit 404 |
 | `google…html`, `tiktok…txt` | Domain-Verifizierung für Google und TikTok. **Nicht löschen** |
@@ -28,6 +29,7 @@ Diese URLs stehen bei Apple und Google als **Support-URL** der jeweiligen App.
 | App | Support-URL |
 |---|---|
 | Hairfit | `https://zenstonellc.com/hairfit-support` |
+| BMX Sesh | `https://zenstonellc.com/bmxsesh-support` |
 | Calm Stoic Journal | `https://zenstonellc.com/calmstoic-support` |
 | KnowUs: Who Knows Who | `https://zenstonellc.com/knowus-support` |
 

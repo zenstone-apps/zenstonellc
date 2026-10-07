@@ -267,7 +267,7 @@ const APPS = [
   {
     datei: 'bmxsesh-support.html',
     name: 'BMX Sesh',
-    voll: 'BMX Sesh: Freestyle Parks',
+    voll: 'BMX Sesh: Bike Freestyle',
     kurzName: 'BMX Sesh',
     einleitung: `A freestyle BMX game: ride parks, link tricks, grinds and manuals into lines, and
         hit big dirt jumps. West Park is free; one purchase unlocks all other parks.`,

@@ -250,6 +250,29 @@ const APPS = [
     einleitung: `A party game about how well your group really knows each other.`,
     datenKurz: `Player names, answers and scores exist only while a session is running and are
         deleted automatically when it ends.`,
+    // Einmalkaeufe statt Abos (Marcel 09.11.2026): eigener Kauf-Abschnitt
+    kaeufe: `
+        <h2 id="purchases">Purchases</h2>
+
+        <h3>What can I buy?</h3>
+        <p>A few questions are free. To unlock more you can buy <em>All-Access</em> (everything)
+        or a single pack — Couples, Friends, Family or Party. Every purchase is one-time:
+        there are no subscriptions and nothing renews.</p>
+
+        <h3>How do I restore a purchase?</h3>
+        <p>Use <em>Restore purchases</em> in the app, signed in with the same Apple ID or Google
+        account you bought with. On a new device or after a reinstall your purchases come
+        back this way.</p>
+
+        <h3>How do I get a refund?</h3>
+        <p>Refunds are handled entirely by the store. On Apple, use
+        <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>;
+        on Android, use the Play Store order history. If something went wrong on our side,
+        write to us first — we would rather fix it.</p>
+
+        <h3>I was charged but the content is still locked</h3>
+        <p>Tap <em>Restore purchases</em> first. If that does not help, send us the receipt from
+        Apple or Google and we will sort it out.</p>`,
     faq: `
         <h3>We cannot join the same room</h3>
         <p>Everyone needs an internet connection and the same room code, and the room has to
@@ -438,11 +461,20 @@ const TERMS = [
     was: `KnowUs is a party game about how well a group knows each other, with an optional
         online mode for playing together in a room.`,
     kaeufe: `
-        <p>The app may offer optional purchases. Purchases are processed by Apple (App Store)
-        or Google (Google Play), not by us. Subscriptions, where offered, renew automatically
-        unless cancelled at least 24 hours before the end of the current period; manage or cancel
-        in your store account settings. Refunds are handled by Apple or Google under their
-        policies. See our <a href="/knowus-support#purchases">support page</a>.</p>`,
+        <p>A small preview of questions is free. Further content is unlocked with optional
+        <strong>one-time purchases</strong>: either <em>All-Access</em>, which unlocks everything,
+        or an individual pack for one area (Couples, Friends, Family or Party). Online play is
+        available for the areas you have unlocked.</p>
+        <ul>
+          <li><strong>No subscriptions:</strong> Every purchase is a one-time payment. Nothing
+          renews automatically.</li>
+          <li><strong>Billing:</strong> Purchases are processed by Apple (App Store) or Google
+          (Google Play), not by us.</li>
+          <li><strong>Restoring:</strong> You can restore your purchases on the same store account
+          from within the app, for example after a reinstall or on a new device.</li>
+          <li><strong>Refunds:</strong> Handled by Apple or Google under their policies. See our
+          <a href="/knowus-support#purchases">support page</a>.</li>
+        </ul>`,
     ki: null,
     hinweis: `In online rooms other players can see the names you enter. Choose a name you are
         comfortable sharing and be respectful: do not use names or answers that are abusive,
@@ -455,7 +487,8 @@ const TERMS = [
     name: 'BMX Sesh',
     voll: 'BMX Sesh: Bike Freestyle',
     was: `BMX Sesh is a freestyle BMX game: ride parks, link tricks, grinds and manuals into
-        lines, and hit dirt jumps.`,
+        lines, and hit dirt jumps. Some modes can be played online with friends in a private room,
+        joined with a room code.`,
     kaeufe: `
         <p>West Park is free. One optional one-time purchase (<em>Unlock all parks</em>) unlocks
         all other parks, including parks added in future updates. It is not a subscription and
@@ -470,8 +503,13 @@ const TERMS = [
     ki: null,
     hinweis: `BMX Sesh is a game. Riding a real BMX bike is dangerous. Nothing in the game is
         instruction or a safe way to learn tricks; always wear protective gear and ride within
-        your ability.`,
-    inhalt: `Scores, records, stickers, garage choices and settings are stored on your device.`
+        your ability.
+        In online rooms other players see your rider and a player label (such as P1 or P2). Be
+        respectful: do not harass other players or try to disrupt a session.`,
+    inhalt: `Scores, records, stickers, garage choices and settings are stored on your device.
+        For online rooms the game connects through an anonymous session of a third-party
+        multiplayer service (Unity Gaming Services); no account or name is required, and the
+        room and connection data exist only while the room is open.`
   },
   {
     datei: 'seventytwo-terms.html',
